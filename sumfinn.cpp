@@ -37,22 +37,14 @@ int main()
  // User input
  // link openererer
  Sleep(2000); // i want it to be delayed for a second before it actually opens
- HWND hWnd = GetConsoleWindow();
+ /*HWND hWnd = GetConsoleWindow();
  ShowWindow(hWnd, SW_HIDE);
  ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-	 TEXT(""), NULL, SW_HIDE);
+ TEXT(""), NULL, SW_HIDE);*/
+ 
  // link openererer
  //test(might get malicious idk yet)
   MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
-  system("pause");
+  //system("pause");
  //test
 }
-
-
-
-
-
-
-
-
-
