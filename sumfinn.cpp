@@ -5,9 +5,10 @@
 #include <string.h>
 #include <fstream>
 #include <stdlib.h>
-
 #include "Mal.h"
-gMal mal;
+#include"uInput.h"
+gMal mal; 
+uInput uint;
 using namespace std;
 
 
@@ -28,26 +29,15 @@ int main()
  std::cout << "If you can read this it is already too late\nyou cannot run ";
  // text displayed to the user
  // User input
- bool string1[20];
- std::cout << "\n ";
- for (int i = 0; i < 1; i++)
- {
-	 std::cin >> string1[i];
- }
- int counter = 0;
- int length;
- length = sizeof(string1) / sizeof(string1[0]);
- std::cout << length;
+ uint.uint();
  // User input
  // link openererer
-
  mal.mal();
-
  // link openererer
- //test(might get malicious idk yet)
+ //theres no point in making them their own seperate thing so im just going to leave these here
   MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
-  //system("pause");
- //test
+  system("pause");
+ //it's just easier, and is probably going to confuse retards who come across this if they do. 
 }
 
 

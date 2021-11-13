@@ -142,9 +142,11 @@
   <ItemGroup>
     <ClCompile Include="Mal.cpp" />
     <ClCompile Include="sumfinn.cpp" />
+    <ClCompile Include="uInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mal.h" />
+    <ClInclude Include="uInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
