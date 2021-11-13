@@ -10,14 +10,10 @@
 gMal mal; 
 uInput uint;
 using namespace std;
-
-
-//#include <webhook.h>
+//#include <webhook.h> | was gonna try to do something with webhooks but nah. I dont feel like figuring out how to make d++ work 
 #define _WIN32_WINNT 0x0500
 // sumfinn.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping
-
-					
 
 int main()
 {
@@ -43,7 +39,7 @@ int main()
 
 
 
-
+ 
 
 
 
