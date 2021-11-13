@@ -5,11 +5,13 @@
 #include <string.h>
 #include <fstream>
 #include <stdlib.h>
+
 #include "Mal.h"
 #include"uInput.h"
 gMal mal; 
 uInput uint;
 using namespace std;
+
 
 //#include <webhook.h>
 #define _WIN32_WINNT 0x0500
@@ -31,11 +33,26 @@ int main()
  uint.uint();
  // User input
  // link openererer
+
  mal.mal();
+
  // link openererer
  //test(might get malicious idk yet)
   MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
   system("pause");
  //test
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
