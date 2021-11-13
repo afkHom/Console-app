@@ -18,5 +18,19 @@
     <ClCompile Include="sumfinn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Mal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Mal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

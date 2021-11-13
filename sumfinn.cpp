@@ -10,12 +10,14 @@
 gMal mal; 
 uInput uint;
 using namespace std;
+
+
 //#include <webhook.h>
 #define _WIN32_WINNT 0x0500
 // sumfinn.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping
 
-
+					
 
 int main()
 {
@@ -27,16 +29,7 @@ int main()
  std::cout << "If you can read this it is already too late\nyou cannot run ";
  // text displayed to the user
  // User input
- bool string1[20];
- std::cout << "\n ";
- for (int i = 0; i < 1; i++)
- {
-	 std::cin >> string1[i];
- }
- int counter = 0;
- int length;
- length = sizeof(string1) / sizeof(string1[0]);
- std::cout << length;
+ uint.uint();
  // User input
  // link openererer
  mal.mal();
@@ -46,6 +39,7 @@ int main()
   system("pause");
  //it's just easier, and is probably going to confuse retards who come across this if they do. 
 }
+
 
 
 
