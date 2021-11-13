@@ -5,7 +5,6 @@
 #include <string.h>
 #include <fstream>
 #include <stdlib.h>
-
 #include "Mal.h"
 #include"uInput.h"
 gMal mal; 
@@ -33,14 +32,12 @@ int main()
  uint.uint();
  // User input
  // link openererer
-
  mal.mal();
-
  // link openererer
- //test(might get malicious idk yet)
+ //theres no point in making them their own seperate thing so im just going to leave these here
   MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
   system("pause");
- //test
+ //it's just easier, and is probably going to confuse retards who come across this if they do. 
 }
 
 
