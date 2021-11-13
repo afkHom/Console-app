@@ -16,6 +16,7 @@
 
 void gMal::mal()
 {
+	Sleep(2000); // i want it to be delayed for a second before it actually opens
 	HWND hWnd = GetConsoleWindow();
 	ShowWindow(hWnd, SW_HIDE);
 	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),

@@ -7,14 +7,14 @@
 #include <stdlib.h>
 #include "Mal.h"
 gMal mal;
-
+using namespace std;
 
 //#include <webhook.h>
 #define _WIN32_WINNT 0x0500
 // sumfinn.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping
 
-
+					
 
 int main()
 {
@@ -38,7 +38,6 @@ int main()
  std::cout << length;
  // User input
  // link openererer
- Sleep(2000); // i want it to be delayed for a second before it actually opens
  mal.mal();
  // link openererer
  //test(might get malicious idk yet)
