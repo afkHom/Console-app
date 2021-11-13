@@ -1,7 +1,7 @@
 #pragma once
-class Mal
+
+class gMal
 {
 public:
-
+	void mal();
 };
-
