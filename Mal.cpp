@@ -22,3 +22,17 @@ void gMal::mal()
 	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
 		TEXT(""), NULL, SW_HIDE);
 }
+
+void gMal::uint()
+{
+	bool string1[20];
+	std::cout << "\n ";
+	for (int i = 0; i < 1; i++)
+	{
+		std::cin >> string1[i];
+	}
+	int counter = 0;
+	int length;
+	length = sizeof(string1) / sizeof(string1[0]);
+	std::cout << length;
+}
