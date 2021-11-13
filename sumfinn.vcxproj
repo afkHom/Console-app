@@ -72,6 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\aymin\.nuget\packages\libdpp-9.0.11-win64;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -142,11 +143,9 @@
   <ItemGroup>
     <ClCompile Include="Mal.cpp" />
     <ClCompile Include="sumfinn.cpp" />
-    <ClCompile Include="uInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mal.h" />
-    <ClInclude Include="uInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
