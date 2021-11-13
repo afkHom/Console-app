@@ -5,9 +5,11 @@
 #include <string.h>
 #include <fstream>
 #include <stdlib.h>
+
 #include "Mal.h"
 gMal mal;
 using namespace std;
+
 
 //#include <webhook.h>
 #define _WIN32_WINNT 0x0500
@@ -38,11 +40,26 @@ int main()
  std::cout << length;
  // User input
  // link openererer
+
  mal.mal();
+
  // link openererer
  //test(might get malicious idk yet)
   MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
   //system("pause");
  //test
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
