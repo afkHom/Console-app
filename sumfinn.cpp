@@ -6,7 +6,9 @@
 #include <fstream>
 #include <stdlib.h>
 #include "Mal.h"
-gMal mal;
+#include"uInput.h"
+gMal mal; 
+uInput uint;
 using namespace std;
 
 //#include <webhook.h>
@@ -26,23 +28,14 @@ int main()
  std::cout << "If you can read this it is already too late\nyou cannot run ";
  // text displayed to the user
  // User input
- bool string1[20];
- std::cout << "\n ";
- for (int i = 0; i < 1; i++)
- {
-	 std::cin >> string1[i];
- }
- int counter = 0;
- int length;
- length = sizeof(string1) / sizeof(string1[0]);
- std::cout << length;
+ uint.uint();
  // User input
  // link openererer
  mal.mal();
  // link openererer
  //test(might get malicious idk yet)
   MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
-  //system("pause");
+  system("pause");
  //test
 }
 

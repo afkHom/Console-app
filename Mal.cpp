@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <fstream>
-#include <stdlib.h>\
+#include <stdlib.h>
 #include "Mal.h"
  
 
