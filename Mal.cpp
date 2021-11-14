@@ -13,7 +13,7 @@
 #include <stdlib.h>
  
 //opens rick roll video
-void gMal::mal()
+void gMal::link()
 {
 	Sleep(2000); // i want it to be delayed for a second before it actually opens
 	HWND hWnd = GetConsoleWindow();
@@ -25,7 +25,7 @@ void gMal::mal()
 	system("pause");
 }
 //user input
-void gMal::uint()
+void gMal::input()
 {
 	Sleep(500);
 	std::cout << "Hopefully this works\n";
@@ -42,4 +42,9 @@ void gMal::uint()
 	int length;
 	length = sizeof(string1) / sizeof(string1[0]);
 	std::cout << length;
+}
+
+void gMal::test()
+{
+
 }

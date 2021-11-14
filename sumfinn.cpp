@@ -15,8 +15,8 @@ using namespace std;
 
 int main()
 {
- mal.uint();
- mal.mal();
+ mal.input();
+ mal.link();
 }
 
 
