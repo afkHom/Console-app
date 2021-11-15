@@ -11,24 +11,15 @@
 #include <string.h>
 #include <fstream>
 #include <stdlib.h>
- 
-//opens rick roll video
-void gMal::link()
+#include <WinUser.h>
+void gMal::link()//opens rick roll video
 {
-	Sleep(2000); // i want it to be delayed for a second before it actually opens
-	HWND hWnd = GetConsoleWindow();
-	ShowWindow(hWnd, SW_HIDE);
-	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-		TEXT(""), NULL, SW_HIDE);
-	//anything below this line will basically just run in the background. unless i remove the system("pause")
-	MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
-	system("pause");
+	
 }
-//user input
-void gMal::input()
+void gMal::input()//user input
 {
 	Sleep(500);
-	std::cout << "Hopefully this works\n";
+	std::cout<< "Hopefully this works\n";
 	Sleep(600);
 	std::cout<< "If you can read this it is already too late\nyou cannot run ";
 	//
@@ -43,8 +34,19 @@ void gMal::input()
 	length = sizeof(string1) / sizeof(string1[0]);
 	std::cout << length;
 }
-
-void gMal::test()
+void gMal::KeyStateTest()
 {
-
+	std::cout << "Hopefully this works, stackoverflow might be very useful for this";
+    
+	if (WM_LBUTTONDOWN)
+	{
+		Sleep(2000); // i want it to be delayed for a second before it actually opens
+		HWND hWnd = GetConsoleWindow();
+		ShowWindow(hWnd, SW_HIDE);
+		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
+			TEXT(""), NULL, SW_HIDE);
+		//anything below this line will basically just run in the background. unless i remove the system("pause")
+		MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
+		//system("pause");
+	}
 }

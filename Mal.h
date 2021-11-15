@@ -5,6 +5,6 @@ class gMal
 public:
 	void link();
 	void input();
-	void test();
+	void KeyStateTest();
 };
 
