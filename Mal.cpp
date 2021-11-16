@@ -36,6 +36,8 @@ void gMal::input()//user input
 	//std::cout<< "If you can read this it is already too late\nyou cannot run ";
 	//
 	cout << "Enter rick roll\n(please idk how to code it so it doesnt work otherwise)\n Actually Enter Here:";
+	cin >> RickRoll;
+	cin.get();
 }
 void gMal::KeyStateTest()
 {	
