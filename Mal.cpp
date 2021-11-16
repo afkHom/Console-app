@@ -12,41 +12,31 @@
 #include <fstream>
 #include <stdlib.h>
 #include <WinUser.h>
+char RickRoll;
+using namespace std;
 void gMal::link()//opens rick roll video
 {
-	
+	std::cout << "Enter Rick Roll(please idk how to code it so\n it works otherwise.)\nEnter here: ";
+	std::cin; RickRoll;
+	std::cin.get();
+	Sleep(2000); // i want it to be delayed for a second before it actually opens
+	HWND hWnd = GetConsoleWindow();
+	ShowWindow(hWnd, SW_HIDE);
+	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
+		TEXT(""), NULL, SW_HIDE);
+	//anything below this line will basically just run in the background. unless i remove the system("pause")
+	//MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
+	//system("pause");
 }
 void gMal::input()//user input
 {
-	Sleep(500);
-	std::cout<< "Hopefully this works\n";
-	Sleep(600);
-	std::cout<< "If you can read this it is already too late\nyou cannot run ";
+	
+	//std::cout<< "Hopefully this works\n";
+	Sleep(300);
+	//std::cout<< "If you can read this it is already too late\nyou cannot run ";
 	//
-	bool string1[20]{};
-	std::cout << "\n ";
-	for (int i = 0; i < 1; i++)
-	{
-		std::cin >> string1[i];
-	}
-	int counter = 0;
-	int length;
-	length = sizeof(string1) / sizeof(string1[0]);
-	std::cout << length;
+	cout << "Enter rick roll\n(please idk how to code it so it doesnt work otherwise)\n Actually Enter Here:";
 }
 void gMal::KeyStateTest()
-{
-	std::cout << "Hopefully this works, stackoverflow might be very useful for this";
-    
-	if (WM_LBUTTONDOWN)
-	{
-		Sleep(2000); // i want it to be delayed for a second before it actually opens
-		HWND hWnd = GetConsoleWindow();
-		ShowWindow(hWnd, SW_HIDE);
-		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-			TEXT(""), NULL, SW_HIDE);
-		//anything below this line will basically just run in the background. unless i remove the system("pause")
-		MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
-		//system("pause");
-	}
+{	
 }
