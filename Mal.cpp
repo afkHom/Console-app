@@ -11,28 +11,42 @@
 #include <string.h>
 #include <fstream>
 #include <stdlib.h>
-#include "Mal.h"
- 
-
-void gMal::mal()
+#include <WinUser.h>
+char RickRoll;
+char Test;
+using namespace std;
+//NOTE// Just rewrite the entire thing today. it hurts for my brain to look at
+void gMal::link()//opens rick roll video
 {
+	std::cout << "Enter Rick Roll(please idk how to code it so\n it works otherwise.)\nEnter here: ";
+	std::cin; RickRoll;
+	std::cin.get();
 	Sleep(2000); // i want it to be delayed for a second before it actually opens
-	HWND hWnd = GetConsoleWindow();
-	ShowWindow(hWnd, SW_HIDE);
-	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-		TEXT(""), NULL, SW_HIDE);
+	
+	//anything below this line will basically just run in the background. unless i remove the system("pause")
+	//MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
+	//system("pause");
 }
-
-void gMal::uint()
+void gMal::input()//user input
 {
-	bool string1[20];
-	std::cout << "\n ";
-	for (int i = 0; i < 1; i++)
-	{
-		std::cin >> string1[i];
-	}
-	int counter = 0;
-	int length;
-	length = sizeof(string1) / sizeof(string1[0]);
-	std::cout << length;
+	
+	//std::cout<< "Hopefully this works\n";
+	Sleep(300);
+	//std::cout<< "If you can read this it is already too late\nyou cannot run ";
+	//
+	cout << "Enter rick roll\n(please idk how to code it so it doesnt work otherwise)\n Actually Enter Here:";
+	cin >> RickRoll;
+}
+void gMal::KeyStateTest()
+{
+	cout << "W= Rick";
+	cin >> Test;
+ if(GetAsyncKeyState(0x57))
+ {
+	 HWND hWnd = GetConsoleWindow();
+	 ShowWindow(hWnd, SW_HIDE);
+	 ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
+		 TEXT(""), NULL, SW_HIDE);
+ }
+ //system("pause");
 }
