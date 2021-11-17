@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <WinUser.h>
 char RickRoll;
+char Test;
 using namespace std;
 void gMal::link()//opens rick roll video
 {
@@ -20,10 +21,7 @@ void gMal::link()//opens rick roll video
 	std::cin; RickRoll;
 	std::cin.get();
 	Sleep(2000); // i want it to be delayed for a second before it actually opens
-	HWND hWnd = GetConsoleWindow();
-	ShowWindow(hWnd, SW_HIDE);
-	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-		TEXT(""), NULL, SW_HIDE);
+	
 	//anything below this line will basically just run in the background. unless i remove the system("pause")
 	//MessageBoxA(NULL, "Why? Fuck you. Thats why.", "The program is open in the background.", MB_OK | MB_ICONHAND);
 	//system("pause");
@@ -37,8 +35,17 @@ void gMal::input()//user input
 	//
 	cout << "Enter rick roll\n(please idk how to code it so it doesnt work otherwise)\n Actually Enter Here:";
 	cin >> RickRoll;
-	cin.get();
 }
 void gMal::KeyStateTest()
-{	
+{
+	cout << "W= Rick";
+	cin >> Test;
+ if(GetAsyncKeyState(0x57))
+ {
+	 HWND hWnd = GetConsoleWindow();
+	 ShowWindow(hWnd, SW_HIDE);
+	 ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
+		 TEXT(""), NULL, SW_HIDE);
+ }
+ //system("pause");
 }

@@ -15,9 +15,9 @@ using namespace std;
 
 int main()
 {
- mal.input();
- mal.link();
-//mal.KeyStateTest();
+ //mal.input();
+ //mal.link();
+mal.KeyStateTest();
 }
 
 
