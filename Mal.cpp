@@ -15,6 +15,7 @@
 char RickRoll;
 char Test;
 using namespace std;
+//NOTE// Just rewrite the entire thing today. it hurts for my brain to look at
 void gMal::link()//opens rick roll video
 {
 	std::cout << "Enter Rick Roll(please idk how to code it so\n it works otherwise.)\nEnter here: ";
