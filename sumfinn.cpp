@@ -6,6 +6,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include "Mal.h"
+char pause;
 gMal mal;
 using namespace std;
 //#include <webhook.h> | was gonna try to do something with webhooks but nah. I dont feel like figuring out how to make d++ work 
@@ -15,9 +16,15 @@ using namespace std;
 
 int main()
 {
+	cout << "test program\n";
+	cout << "it will open links on your computer, and stay open in the background\n";
+	cout << "it is nothing malicious, just a warning\n";
+	Sleep(2000);
+	mal.link();
+	cin >> pause;
+
  //mal.input();
- //mal.link();
-mal.KeyStateTest();
+//mal.KeyStateTest();
 }
 
 

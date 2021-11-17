@@ -6,5 +6,6 @@ public:
 	void link();
 	void input();
 	void KeyStateTest();
+	void accptdeny();
 };
 
