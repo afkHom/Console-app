@@ -8,4 +8,3 @@ public:
 	void KeyStateTest();
 	void accptdeny();
 };
-

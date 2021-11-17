@@ -17,7 +17,7 @@ char Test;
 char accpt;
 char deny;
 using namespace std;
-// A=0x41 D=0x44
+
 //NOTE// Just rewrite the entire thing today. it hurts for my brain to look at
 void gMal::link()//opens rick roll video
 {
@@ -73,6 +73,6 @@ void gMal::KeyStateTest()
 	}
 }
 void gMal::accptdeny()
-{
- //portion of code which where they will either accept or deny
+{// A=0x41 D=0x44
+ 
 }

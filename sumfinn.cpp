@@ -13,30 +13,11 @@ using namespace std;
 #define _WIN32_WINNT 0x0500
  //Program execution begins here
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping
-
 int main()
 {
 	cout << "test program\n";
 	cout << "it will open links on your computer, and stay open in the background\n";
 	cout << "it is nothing malicious, just a warning\n";
-	Sleep(2000);
-	mal.link();
-	cin >> pause;
-
- //mal.input();
-//mal.KeyStateTest();
+	Sleep(4000);
+	
 }
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
