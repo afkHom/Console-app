@@ -8,3 +8,8 @@ public:
 	void KeyStateTest();
 	void accptdeny();
 };
+
+class gFix
+{
+	
+};
