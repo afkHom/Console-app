@@ -20,5 +20,5 @@ int main()
 	cout << "it is nothing malicious, just a warning\n";
 	Sleep(4000);
 	mal.accptdeny();
-	mal.link();
+	//mal.link();
 }

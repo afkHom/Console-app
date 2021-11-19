@@ -62,7 +62,7 @@ void gMal::accptdeny()
 	system("cls");
 	cout << "Accept or Deny here please\n :";
 	cin >> accpt;
- if(GetAsyncKeyState(0x41))
+ if(accpt== 'A' || accpt== 'a')
  {
 	 cout << "accepted, proceeding";
 	 Sleep(1000);
@@ -71,10 +71,13 @@ void gMal::accptdeny()
 	 cout << ".";
 	 Sleep(1000);
 	 cout << ".";//theres probably a better way of doing this, but i just genuinelly dont care. Its 1:51 AM
-	 
+	 cout << "\nworked";
+	 cin >> accpt;
  }
- else if (GetAsyncKeyState(0x44))
+ else if(accpt== 'D' || accpt== 'd')
  {
-	 system("taskkill /IM sumfinn.exe /F");
+	 //system("taskkill /IM sumfinn.exe /F");
+	 cout << "denied";
+	 cin >> deny;
  }
 }
