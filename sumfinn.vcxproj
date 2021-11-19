@@ -148,7 +148,7 @@
     <ClInclude Include="Mal.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="TextFile1.txt" />
+    <Text Include="learn.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

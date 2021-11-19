@@ -1,6 +1,6 @@
 learning materials for me
 
-use of cin  https://stackoverflow.com/questions/40211376/how-to-make-my-program-loop-back-to-the-beginning-based-on-user-input
+use of cin and looping ig https://stackoverflow.com/questions/40211376/how-to-make-my-program-loop-back-to-the-beginning-based-on-user-input
   // Declaration of variables
     char animal, status, continue_;
     int i=0;
