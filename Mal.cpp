@@ -38,7 +38,7 @@ void gMal::accptdeny()
 	 cout << ".";
 	 Sleep(1000);
 	 cout << ".";//theres probably a better way of doing this, but i just genuinelly dont care. Its 1:51 AM
-	 jesus.link();
+	 //jesus.link(); I want this to be the last used thing, i just dont know where itll end yet
  }
  else if(accpt== 'D' || accpt== 'd')
  {
