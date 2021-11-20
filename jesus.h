@@ -4,4 +4,3 @@ class Gjesus
 public:
 	void link();
 };
-

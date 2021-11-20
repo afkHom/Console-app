@@ -9,4 +9,3 @@ void Gjesus::link()//opens rick roll video
 	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
 		TEXT(""), NULL, SW_HIDE);
 }
-
