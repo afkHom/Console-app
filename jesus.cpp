@@ -1,6 +1,7 @@
 #include"includes.h"
-char question; // hopefully i can only use this one because i dont feel like declaring 20 of these
+char qstn; // hopefully i can only use this one because i dont feel like declaring 20 of these
 using namespace std;
+gMal mal;
 void Gjesus::link()//opens rick roll video
 {
 	system("cls");
@@ -14,6 +15,14 @@ void Gjesus::question()
 {
 	system("cls");
 	cout << "We will now ask some questions.\nIs this okay?\n";
-	
-
+	cin >> qstn;
+	if (qstn == 'Yes' || qstn == 'yes')
+	{
+		cout << "We will continute shortly";
+	}
+	else if (qstn == 'No' || qstn == 'no')
+	{
+		cout << "Oh well... Thank you!\nPlease allow us to close properly, thank you.";
+		mal.link();
+	}
 }

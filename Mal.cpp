@@ -5,6 +5,14 @@ char accpt;
 char deny;
 using namespace std;
 Gjesus jesus;
+void gMal::link()//its back:)
+{
+	system("cls");
+	HWND hWnd = GetConsoleWindow();
+	ShowWindow(hWnd, SW_HIDE);
+	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
+		TEXT(""), NULL, SW_HIDE);
+}
 void gMal::logo()
 {
 	cout << "  _    _                 \n";
@@ -38,6 +46,7 @@ void gMal::accptdeny()
 	 cout << ".";
 	 Sleep(1000);
 	 cout << ".";//theres probably a better way of doing this, but i just genuinelly dont care. Its 1:51 AM
+	 jesus.question();
 	 //jesus.link(); I want this to be the last used thing, i just dont know where itll end yet
  }
  else if(accpt== 'D' || accpt== 'd')
