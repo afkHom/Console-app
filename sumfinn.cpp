@@ -10,6 +10,7 @@ using namespace std;
 
 int main()
 {
+	mal.logo();
 	cout << "test program| Executable name sumfinn.exe\n";
 	cout << "it will open links on your computer, and stay open in the background\n";
 	cout << "it is nothing malicious, just a warning\n";

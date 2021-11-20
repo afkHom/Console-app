@@ -15,3 +15,5 @@
 #include <Windows.h>
 #include <stdio.h>
 #include <string.h>
+#include "Mal.h"
+#include "jesus.h"

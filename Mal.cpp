@@ -1,5 +1,4 @@
-#include "Mal.h"
-#include"jesus.h"
+
 #include"includes.h"
 Gjesus jesus;
 char RickRoll;
@@ -9,19 +8,27 @@ char deny;
 
 using namespace std;
 //NOTE// Just rewrite the entire thing today. it hurts for my brain to look at
-void gMal::link()//opens rick roll video
+void gMal::logo()//opens rick roll video
 {
-	
+	cout << "  _    _                 \n";
+	Sleep(100);
+	cout << " | |  | |                \n";
+	Sleep(100);
+	cout << " | |__| | ___  _ __ ___  \n";
+	Sleep(100);
+	cout << " |  __  |/ _ \| '_ ` _ \ \n";
+	Sleep(100);
+	cout << " | |  | | (_)| | | | | |\n";
+	Sleep(100);
+	cout << " |_|  |_|\___/|_| |_| |_|\n";
+	Sleep(100);
+	cout << "Made By:by Hom#2913\n";
+	cout << "https://github.com/afkHom \n";
+	Sleep(3000);
+	system("cls");
 }
 void gMal::input()//user input
-{//going to try
-	
-	//std::cout<< "Hopefully this works\n";
-	Sleep(300);
-	//std::cout<< "If you can read this it is already too late\nyou cannot run ";
-	//
-	cout << "Enter rick roll\n(please idk how to code it so it doesnt work otherwise)\n Actually Enter Here:";
-	cin >> RickRoll;
+{
 }
 void gMal::KeyStateTest()
 {
@@ -46,7 +53,7 @@ void gMal::KeyStateTest()
 void gMal::accptdeny()
 {// A=0x41 D=0x44
 	system("cls");
-	cout << "Accept or Deny here please\n :";
+	cout << "Accept or Deny here please\n:";
 	cin >> accpt;
  if(accpt== 'A' || accpt== 'a')
  {
@@ -62,8 +69,10 @@ void gMal::accptdeny()
  }
  else if(accpt== 'D' || accpt== 'd')
  {
-	 system("taskkill /IM Discord.exe /F");
-	 cout << "denied";
-	 cin >> deny;
+	 cout << "denied\n";
+	 cout << "shutting down";
+	 Sleep(1000);
+	 system("taskkill /IM sumfinn.exe /F");
+	 
  }
 }

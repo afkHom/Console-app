@@ -3,7 +3,7 @@
 class gMal
 {
 public:
-	void link();
+	void logo();
 	void input();
 	void KeyStateTest();
 	void accptdeny();
