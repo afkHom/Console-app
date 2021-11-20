@@ -1,8 +1,8 @@
 #include"includes.h"
 #include "Mal.h"
 char pause;
-gMal mal;
 using namespace std;
+gMal mal;
 //#include <webhook.h> | was gonna try to do something with webhooks but nah. I dont feel like figuring out how to make d++ work 
  //Program execution begins here
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping

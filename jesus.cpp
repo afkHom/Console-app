@@ -1,4 +1,3 @@
-#include "jesus.h"
 #include"includes.h"
 
 void Gjesus::link()//opens rick roll video

@@ -1,13 +1,10 @@
-
 #include"includes.h"
-Gjesus jesus;
 char RickRoll;
 char Test;
 char accpt;
 char deny;
-
+Gjesus jesus;
 using namespace std;
-//NOTE// Just rewrite the entire thing today. it hurts for my brain to look at
 void gMal::logo()
 {
 	cout << "  _    _                 \n";
@@ -41,7 +38,6 @@ void gMal::accptdeny()
 	 cout << ".";
 	 Sleep(1000);
 	 cout << ".";//theres probably a better way of doing this, but i just genuinelly dont care. Its 1:51 AM
-	 cout << "\nworked";
 	 jesus.link();
  }
  else if(accpt== 'D' || accpt== 'd')
