@@ -1,7 +1,7 @@
 #include "jesus.h"
 #include"includes.h"
 
-void Gjesus::link()
+void Gjesus::link()//opens rick roll video
 {
 	system("cls");
 	HWND hWnd = GetConsoleWindow();

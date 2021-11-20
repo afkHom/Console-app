@@ -8,7 +8,7 @@ char deny;
 
 using namespace std;
 //NOTE// Just rewrite the entire thing today. it hurts for my brain to look at
-void gMal::logo()//opens rick roll video
+void gMal::logo()
 {
 	cout << "  _    _                 \n";
 	Sleep(100);
@@ -26,29 +26,6 @@ void gMal::logo()//opens rick roll video
 	cout << "https://github.com/afkHom \n";
 	Sleep(3000);
 	system("cls");
-}
-void gMal::input()//user input
-{
-}
-void gMal::KeyStateTest()
-{
-	cout << "W= Rick\nA= Test, my yt channel";
-	cout << "\nEnter Here:";
-	cin >> Test;
-	if(GetAsyncKeyState(0x57))
- {
-	 HWND hWnd = GetConsoleWindow();
-	 ShowWindow(hWnd, SW_HIDE);
-	 ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-		 TEXT(""), NULL, SW_HIDE);
- }
-	else if (GetAsyncKeyState(0x41))
-	{
-		HWND hWnd = GetConsoleWindow();
-		ShowWindow(hWnd, SW_HIDE);
-		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA"),
-			TEXT(""), NULL, SW_HIDE);
-	}
 }
 void gMal::accptdeny()
 {// A=0x41 D=0x44
