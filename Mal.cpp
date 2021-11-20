@@ -3,8 +3,8 @@ char RickRoll;
 char Test;
 char accpt;
 char deny;
-Gjesus jesus;
 using namespace std;
+Gjesus jesus;
 void gMal::logo()
 {
 	cout << "  _    _                 \n";
@@ -15,7 +15,7 @@ void gMal::logo()
 	Sleep(100);
 	cout << " |  __  |/ _ \| '_ ` _ \ \n";
 	Sleep(100);
-	cout << " | |  | | (_)| | | | | |\n";
+	cout << " | |  | | (_)| | | | | |\ \n";
 	Sleep(100);
 	cout << " |_|  |_|\___/|_| |_| |_|\n";
 	Sleep(100);

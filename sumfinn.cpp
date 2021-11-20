@@ -1,5 +1,4 @@
 #include"includes.h"
-#include "Mal.h"
 char pause;
 using namespace std;
 gMal mal;
