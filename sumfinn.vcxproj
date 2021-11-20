@@ -141,10 +141,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="jesus.cpp" />
     <ClCompile Include="Mal.cpp" />
     <ClCompile Include="sumfinn.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="jesus.h" />
     <ClInclude Include="Mal.h" />
   </ItemGroup>
   <ItemGroup>

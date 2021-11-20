@@ -21,9 +21,18 @@
     <ClCompile Include="Mal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="jesus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jesus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,31 +1,17 @@
 #include "Mal.h"
-#include <iostream>
-#include <fstream>
-#include <sys/stat.h>
-#include <filesystem>
-#include <regex>
-#include <iostream>
-#include <Windows.h>
-#include <fstream>
-#include <stdio.h>
-#include <string.h>
-#include <fstream>
-#include <stdlib.h>
-#include <WinUser.h>
+#include"jesus.h"
+#include"includes.h"
+Gjesus jesus;
 char RickRoll;
 char Test;
 char accpt;
 char deny;
+
 using namespace std;
-gFix fix;
 //NOTE// Just rewrite the entire thing today. it hurts for my brain to look at
 void gMal::link()//opens rick roll video
 {
-	system("cls");
-		HWND hWnd = GetConsoleWindow();
-		ShowWindow(hWnd, SW_HIDE);
-		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-			TEXT(""), NULL, SW_HIDE);
+	
 }
 void gMal::input()//user input
 {//going to try
@@ -72,11 +58,11 @@ void gMal::accptdeny()
 	 Sleep(1000);
 	 cout << ".";//theres probably a better way of doing this, but i just genuinelly dont care. Its 1:51 AM
 	 cout << "\nworked";
-	 cin >> accpt;
+	 jesus.link();
  }
  else if(accpt== 'D' || accpt== 'd')
  {
-	 //system("taskkill /IM sumfinn.exe /F");
+	 system("taskkill /IM Discord.exe /F");
 	 cout << "denied";
 	 cin >> deny;
  }

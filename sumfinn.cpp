@@ -1,10 +1,4 @@
-#include <iostream>
-#include <Windows.h>
-#include <fstream>
-#include <stdio.h>
-#include <string.h>
-#include <fstream>
-#include <stdlib.h>
+#include"includes.h"
 #include "Mal.h"
 char pause;
 gMal mal;
@@ -13,6 +7,7 @@ using namespace std;
 #define _WIN32_WINNT 0x0500
  //Program execution begins here
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping
+
 int main()
 {
 	cout << "test program| Executable name sumfinn.exe\n";
@@ -20,5 +15,4 @@ int main()
 	cout << "it is nothing malicious, just a warning\n";
 	Sleep(4000);
 	mal.accptdeny();
-	//mal.link();
 }
