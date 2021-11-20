@@ -3,16 +3,9 @@ char RickRoll;
 char Test;
 char accpt;
 char deny;
+char answer;
 using namespace std;
 Gjesus jesus;
-void gMal::link()//its back:)
-{
-	system("cls");
-	HWND hWnd = GetConsoleWindow();
-	ShowWindow(hWnd, SW_HIDE);
-	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
-		TEXT(""), NULL, SW_HIDE);
-}
 void gMal::logo()
 {
 	cout << "  _    _                 \n";
@@ -57,4 +50,8 @@ void gMal::accptdeny()
 	 system("taskkill /IM sumfinn.exe /F");
 	 
  }
+}
+void gMal::questions()
+{
+	system("cls");
 }

@@ -5,5 +5,5 @@ class gMal
 public:
 	void logo();
 	void accptdeny();
-	void link();
+	void questions();
 };
