@@ -54,4 +54,10 @@ void gMal::accptdeny()
 void gMal::questions()
 {
 	system("cls");
+	cout << "yea i give up i dont feel like trying to overcome the challenges associated with this project anymore\njust type O or something\n:";
+	cin >> answer;
+	if (answer == 'O' || answer == 'o')
+	{
+		system("taskkill /IM sumfinn.exe /F");
+	}
 }
