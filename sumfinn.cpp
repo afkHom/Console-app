@@ -5,7 +5,7 @@ gMal mal;
 //#include <webhook.h> | was gonna try to do something with webhooks but nah. I dont feel like figuring out how to make d++ work 
  //Program execution begins here
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping
-
+//idk i might just give up on it just not feeling it anymore, atleast not right now.
 int main()
 {
 	mal.logo();
