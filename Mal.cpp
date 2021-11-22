@@ -1,10 +1,10 @@
 #include"includes.h"
+using namespace std;
 char RickRoll;
 char Test;
 char accpt;
 char deny;
 char answer;
-using namespace std;
 Gjesus jesus;
 void gMal::logo()
 {
@@ -51,13 +51,43 @@ void gMal::accptdeny()
 	 
  }
 }
+
+//------------------------------------------------------------------------------------------idk how this is going to work. this is probably going to be very messy game of back and forth between files
 void gMal::questions()
 {
 	system("cls");
-	cout << "yea i give up i dont feel like trying to overcome the challenges associated with this project anymore\njust type O or something\n:";
+	cout << "The questions will be Y/N\n";
 	cin >> answer;
-	if (answer == 'O' || answer == 'o')
+	if (answer == 'Y' || answer == 'y')
 	{
-		system("taskkill /IM sumfinn.exe /F");
+		cout << "Cool, let me think of how im gonna code the rest of this rq.\n";
+		Sleep(3000);
+		cout << "Honestly"; Sleep(500); cout<<"I have no idea how im going to do this\n So... ";//yes im keeping it here. i dont care if it hurts your eyes go away stop looking at my code you fucking filthy piece of shit get off my repo. Go paste something else you worthless piece of shit
+		cout << "So like its just gonna close now. Have a good one or whatever"; Sleep(2000);
+		jesus.link();
+		MessageBoxA(NULL, "yes you did just get rick rolled.", "yes", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "The programs still open in the background because i felt like it. Have fun closing it.", "Also...", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
+		MessageBoxA(NULL, "thats all", "Thanks!", MB_OK | MB_ICONHAND);
+		HWND hWnd = GetConsoleWindow();
+		ShowWindow(hWnd, SW_HIDE);
+		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA"),
+			TEXT(""), NULL, SW_HIDE);
+		//system("pause");
+	}
+	else if (answer == 'N' || answer == 'n')
+	{
+	  // i dont feel like putting something here
 	}
 }
