@@ -1,42 +1,18 @@
-#include <iostream>
-#include <Windows.h>
-#include <fstream>
-#include <stdio.h>
-#include <string.h>
-#include <fstream>
-#include <stdlib.h>
-#include "Mal.h"
+#include"includes.h"
 char pause;
-gMal mal;
 using namespace std;
+gMal mal;
 //#include <webhook.h> | was gonna try to do something with webhooks but nah. I dont feel like figuring out how to make d++ work 
-#define _WIN32_WINNT 0x0500
  //Program execution begins here
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping
-
+//idk i might just give up on it just not feeling it anymore, atleast not right now.
 int main()
 {
-	cout << "test program\n";
+	mal.logo();
+	cout << "test program| Executable name sumfinn.exe\n";
 	cout << "it will open links on your computer, and stay open in the background\n";
 	cout << "it is nothing malicious, just a warning\n";
-	Sleep(2000);
-	mal.link();
-	cin >> pause;
-
- //mal.input();
-//mal.KeyStateTest();
+	Sleep(4000);
+	//mal.accptdeny(); for testing 
+	mal.questions();
 }
-
-
-
-
- 
-
-
-
-
-
-
-
-
-

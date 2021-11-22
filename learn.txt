@@ -1,0 +1,74 @@
+learning materials for me
+
+use of cin and looping ig https://stackoverflow.com/questions/40211376/how-to-make-my-program-loop-back-to-the-beginning-based-on-user-input
+  // Declaration of variables
+    char animal, status, continue_;
+    int i=0;
+
+    //Begin Loop
+    do {
+        cout<<"Welcome to the Animal Insurance Company! What type of animal would you like to insure today: Enter D for Dog, C for Cat, B for Bird or R for Reptile: "<<endl;
+        cin >> animal;
+        if(animal=='D' || animal=='d') {
+            cout<<"You have selected a dog, has your dog been neutered? Enter Y for Yes or N for NO."<<endl;
+
+            //until the required input is entered, program will keep asking for it
+            do {
+                cin>>status;
+                if(status=='Y' || status=='y') {
+                    cout<<"The insurance for your dog cost is $50."<<endl;
+                    break;
+                }
+                else if(status =='N' || status=='n') {
+                    cout<<"The insurance for your dog cost is $80."<<endl;
+                    break;
+                }
+
+                else {
+                    cout<<"Invalid Input, please type Y or N"<<endl;
+                }
+
+            }while(status != 'y' || status != 'Y' || status != 'n' || status != 'N');
+
+        }
+
+        else if (animal=='C' || animal=='c') {
+            cout<<"You have selected a cat, has your cat been neutered? Enter Y for Yes or N for NO."<<endl;
+
+            //until the required input is entered, program will keep asking for it
+            do {
+                cin>>status;
+                if(status=='Y' || status=='y') {
+                    cout<<"The insurance for your dog cost is $40."<<endl;
+                    break;
+                }
+                else if(status =='N' || status=='n') {
+                    cout<<"The insurance for your dog cost is $60."<<endl;
+                    break;
+                }
+
+                else {
+                    cout<<"Invalid Input, please type Y or N"<<endl;
+                }
+
+            }while(status != 'y' || status != 'Y' || status != 'n' || status != 'N');
+
+        }
+
+        else if (animal=='B' || animal=='b' || animal=='R' || animal=='r')
+            cout<<"The insurance cost will be $10"<<endl;
+        else {
+            cout<<"Invalid Input"<<endl;
+            break;
+        }
+
+        cout<<"Do you want to insure another animal? Enter Y for Yes or N for NO."<<endl;
+        cin>>continue_;
+        if(continue_=='n' || continue_=='N')
+            cout<<"Thank you for using Animal Insurance Company"<<endl;
+
+    }while(continue_ == 'y' || continue_ == 'Y');
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------
