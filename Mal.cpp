@@ -47,7 +47,7 @@ void gMal::accptdeny()
 	 cout << "denied\n";
 	 cout << "shutting down";
 	 Sleep(1000);
-	 system("taskkill /IM sumfinn.exe /F");
+	 //system("taskkill /IM sumfinn.exe /F"); this line isnt needed. Program returns 0 anyway
 	 
  }
 }
