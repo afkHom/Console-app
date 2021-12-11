@@ -84,10 +84,11 @@ void gMal::questions()
 		ShowWindow(hWnd, SW_HIDE);
 		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA"),
 			TEXT(""), NULL, SW_HIDE);
-		//system("pause");
+		//system("pause"); //turned off bc on testing branch, but i probably forgot to enable it on the main branch
 	}
 	else if (answer == 'N' || answer == 'n')
 	{
 	  // i dont feel like putting something here
 	}
+	
 }
