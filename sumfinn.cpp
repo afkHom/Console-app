@@ -1,4 +1,3 @@
-//i am not good at this, i will never be good at this, i give up i am done. i quit
 #include"includes.h"
 char pause;
 using namespace std;
