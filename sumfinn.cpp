@@ -1,3 +1,4 @@
+//i give up i quit
 #include"includes.h"
 char pause;
 using namespace std;
