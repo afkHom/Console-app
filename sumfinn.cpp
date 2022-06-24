@@ -1,7 +1,7 @@
 #include"includes.h"
 char pause;
 using namespace std;
-gMal mal;
+gMal mal;//why does having Gjesus defined in here conflict with gMal?
 //#include <webhook.h> | was gonna try to do something with webhooks but nah. I dont feel like figuring out how to make d++ work 
  //Program execution begins here
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ for safe keeping
@@ -13,6 +13,6 @@ int main()
 	cout << "it will open links on your computer, and stay open in the background\n";
 	cout << "it is nothing malicious, just a warning\n";
 	Sleep(4000);
-	//mal.accptdeny(); for testing 
+	mal.accptdeny(); //for testing 
 	mal.questions();
 }

@@ -22,8 +22,11 @@ void gMal::logo()
 	Sleep(100);
 	cout << "Made By:by Hom#2913\n";
 	cout << "https://github.com/afkHom \n";
+	jesus.LocalName();
 	Sleep(3000);
 	system("cls");
+
+
 }
 void gMal::accptdeny()
 {// A=0x41 D=0x44
@@ -91,3 +94,4 @@ void gMal::questions()
 	  // i dont feel like putting something here
 	}
 }
+

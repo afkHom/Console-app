@@ -15,5 +15,7 @@
 #include <Windows.h>
 #include <stdio.h>
 #include <string.h>
+#include <cstdio>
+#include <Lmcons.h>
 #include "Mal.h"
 #include "jesus.h"

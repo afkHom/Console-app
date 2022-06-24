@@ -33,3 +33,17 @@ void Gjesus::question()
 		system("pause");
 	}
 }
+void Gjesus::FileDeletion()// this is just a test to see if i can delete files
+{
+
+}
+void Gjesus::LocalName()
+{
+	TCHAR name[UNLEN + 1];
+	DWORD size = UNLEN + 1;
+
+	if (GetUserName((TCHAR*)name, &size))
+		wcout << L"Hello, " << name << L"!\n";
+	else
+		cout << "Why cant i find your name. Whatre you hiding weirdo\n";
+}
