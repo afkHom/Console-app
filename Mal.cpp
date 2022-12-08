@@ -1,4 +1,6 @@
 #include"includes.h"
+#include <functional>
+//from looking back at my own code i think i was calling jesus to mal and using mal  in sumfinn.cpp
 using namespace std;
 char RickRoll;
 char Test;
@@ -6,8 +8,10 @@ char accpt;
 char deny;
 char answer;
 Gjesus jesus;
+
 void gMal::logo()
 {
+	//Logo causes small errors, it doesnt break anything.
 	cout << "  _    _                 \n";
 	Sleep(100);
 	cout << " | |  | |                \n";
@@ -21,7 +25,8 @@ void gMal::logo()
 	cout << " |_|  |_|\___/|_| |_| |_|\n";
 	Sleep(100);
 	cout << "Made By:by Hom#2913\n";
-	cout << "https://github.com/afkHom \n";
+	cout << "https://github.com/afkHom \n";	
+	Sleep(200);
 	jesus.LocalName();
 	Sleep(3000);
 	system("cls");
@@ -59,39 +64,17 @@ void gMal::accptdeny()
 void gMal::questions()
 {
 	system("cls");
-	cout << "The questions will be Y/N\n";
-	cin >> answer;
-	if (answer == 'Y' || answer == 'y')
-	{
-		cout << "Cool, let me think of how im gonna code the rest of this rq.\n";
-		Sleep(3000);
-		cout << "Honestly"; Sleep(500); cout<<"I have no idea how im going to do this\n So... ";//yes im keeping it here. i dont care if it hurts your eyes go away stop looking at my code you fucking filthy piece of shit get off my repo. Go paste something else you worthless piece of shit
-		cout << "So like its just gonna close now. Have a good one or whatever"; Sleep(2000);
-		jesus.link();
-		MessageBoxA(NULL, "yes you did just get rick rolled.", "yes", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "The programs still open in the background because i felt like it. Have fun closing it.", "Also...", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "", "", MB_OK | MB_ICONHAND);
-		MessageBoxA(NULL, "thats all", "Thanks!", MB_OK | MB_ICONHAND);
-		HWND hWnd = GetConsoleWindow();
-		ShowWindow(hWnd, SW_HIDE);
-		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA"),
-			TEXT(""), NULL, SW_HIDE);
+	
+		//HWND hWnd = GetConsoleWindow();
+		//(hWnd, SW_HIDE);
+		//ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA"),
+		//	TEXT(""), NULL, SW_HIDE);
 		//system("pause");
 	}
-	else if (answer == 'N' || answer == 'n')
-	{
-	  // i dont feel like putting something here
-	}
-}
+	
 
+
+
+
+
+	

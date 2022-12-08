@@ -6,4 +6,6 @@ public:
 	void logo();
 	void accptdeny();
 	void questions();
+	//void Date();
+	
 };

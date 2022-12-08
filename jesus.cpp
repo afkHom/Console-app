@@ -1,7 +1,7 @@
 #include"includes.h"
 char qstn; // hopefully i can only use this one because i dont feel like declaring 20 of these
 using namespace std;
-gMal test;
+gMal Mal;
 void Gjesus::link()//opens rick roll video
 {
 	system("cls");
@@ -19,7 +19,7 @@ void Gjesus::question()
 	if (qstn == 'Y' || qstn == 'y')
 	{
 		cout << "We will continute shortly";
-		test.questions();
+		Mal.questions();
 	}
 	else if (qstn == 'N' || qstn == 'n')
 	{
@@ -35,7 +35,8 @@ void Gjesus::question()
 }
 void Gjesus::FileDeletion()// this is just a test to see if i can delete files
 {
-
+	
+	
 }
 void Gjesus::LocalName()
 {
