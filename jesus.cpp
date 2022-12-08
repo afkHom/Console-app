@@ -4,7 +4,17 @@ using namespace std;
 gMal Mal;
 void Gjesus::link()//opens rick roll video
 {
-	
+	//url to open
+	std::string url = "https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA";
+	//funny whur box opens link
+	int result = system(("start " + url).c_str());
+    //check result
+	if (result == 0) {
+		std::cout << "Shit popped" << std::endl;
+	} else {
+		std::cout << "there was an error" << std::endl;
+	}
+	return;
 
 	 /* system("cls");
 	HWND hWnd = GetConsoleWindow();
