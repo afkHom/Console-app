@@ -4,11 +4,9 @@ using namespace std;
 gMal Mal;
 void Gjesus::link()//opens rick roll video
 {
-	//url to open
-	std::string url = "https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA";
-	//funny whur box opens link
-	int result = system(("start " + url).c_str());
-    //check result
+	
+	std::string url = "https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA";	
+	int result = system(("start " + url).c_str()); 
 	if (result == 0) {
 		std::cout << "Shit popped" << std::endl;
 	} else {
