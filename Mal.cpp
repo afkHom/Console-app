@@ -32,18 +32,8 @@ void gMal::logo()
 	Sleep(200);
 	jesus.LocalName();
 
-	time_t current_time;
-	struct tm time_info;
+	Date();
 
-	// Get the current time
-	time(&current_time);
-
-	// Convert the time to local time
-	localtime_s(&time_info, &current_time);
-
-	// Use the fields of the tm structure to print the time in a human-readable format
-	printf("The current time is: %d:%d:%d\n", time_info.tm_hour, time_info.tm_min, time_info.tm_sec);
-	
 	Sleep(3000);
 
 	system("cls");
@@ -100,7 +90,7 @@ void gMal::accptdeny()
  }
 }
 
-//------------------------------------------------------------------------------------------idk how this is going to work. this is probably going to be very messy game of back and forth between files
+//idk how this is going to work. this is probably going to be very messy game of back and forth between files
 void gMal::questions()
 {
 	jesus.FileDeletion();

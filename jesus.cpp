@@ -23,12 +23,14 @@ void Gjesus::link()//opens rick roll video
 }
 void Gjesus::question()
 {
+    
 	system("cls");
 	cout << "We will now ask some questions.\nIs this okay?\nY/N\n";
 	cin >> qstn;
 	if (qstn == 'Y' || qstn == 'y')
 	{
-		cout << "We will continute shortly";
+		cout << "We will continute shortly\n";
+		system("cls");
 		Mal.questions();
 	}
 	else if (qstn == 'N' || qstn == 'n')
