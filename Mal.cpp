@@ -2,6 +2,8 @@
 #include <functional>
 //from looking back at my own code i think i was calling jesus to mal and using mal  in sumfinn.cpp
 
+
+
 using namespace std;
 char RickRoll;
 char Test;
@@ -30,7 +32,6 @@ void gMal::logo()
 	Sleep(200);
 	jesus.LocalName();
 
-
 	time_t current_time;
 	struct tm time_info;
 
@@ -41,39 +42,68 @@ void gMal::logo()
 	localtime_s(&time_info, &current_time);
 
 	// Use the fields of the tm structure to print the time in a human-readable format
-	printf("The current time is: %d:%d\n", time_info.tm_hour, time_info.tm_min);
-
-
+	printf("The current time is: %d:%d:%d\n", time_info.tm_hour, time_info.tm_min, time_info.tm_sec);
+	
 	Sleep(3000);
+
 	system("cls");
 }
 void gMal::accptdeny()
-{
-	// A=0x41 D=0x44
-	char accpt = '\0';
-	while (accpt != 'A' && accpt != 'D')
-	{
-		std::cout << "Accept or Deny here please\n:";
-		std::cin >> accpt;
-	}
+{// A=0x41 D=0x44
+	cout << "Accept or Deny here please\n:";
+	cin >> accpt;
+ if(accpt== 'A' || accpt== 'a')
+ {
+	 cout << "accepted, proceeding";
+	 Sleep(1000);
+	 cout << ".";
+	 Sleep(1000);
+	 cout << ".";
+	 Sleep(1000);
+	 cout << ".";//theres probably a better way of doing this, but i just genuinelly dont care. Its 1:51 AM
+	 jesus.question();
+	 //jesus.link(); I want this to be the last used thing, i just dont know where itll end yet
+ }
+ else if(accpt== 'D' || accpt== 'd')
+ {
+	 cout << "denied\n";
+	 cout << "shutting down";
+	 Sleep(1000);
 
-	if (accpt == 'A')
-	{
-		std::cout << "accepted, proceeding" << std::endl;
-		jesus.question();
-	}
-	else if (accpt == 'D')
-	{
-		std::cout << "denied" << std::endl;
-		return;
-	}
+	 //safer way to close application
+	 HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+	 if (snapshot != INVALID_HANDLE_VALUE)
+	 {
+		 PROCESSENTRY32 processInfo;
+		 processInfo.dwSize = sizeof(PROCESSENTRY32);
+
+		 if (Process32First(snapshot, &processInfo))
+		 {
+			 do
+			 {
+				 if (wcscmp(processInfo.szExeFile, L"sumfinn.exe") == 0)
+				 {
+					 // Found the process, now try to open it and terminate it
+					 HANDLE processHandle = OpenProcess(PROCESS_TERMINATE, FALSE, processInfo.th32ProcessID);
+					 if (processHandle != NULL)
+					 {
+						 TerminateProcess(processHandle, 0);
+						 CloseHandle(processHandle);
+					 }
+				 }
+			 } while (Process32Next(snapshot, &processInfo));
+		 }
+
+		 CloseHandle(snapshot);
+	 }
+	 
+ }
 }
-
 
 //------------------------------------------------------------------------------------------idk how this is going to work. this is probably going to be very messy game of back and forth between files
 void gMal::questions()
 {
-	system("cls");
+	jesus.FileDeletion();
 	
 		//HWND hWnd = GetConsoleWindow();
 		//(hWnd, SW_HIDE);

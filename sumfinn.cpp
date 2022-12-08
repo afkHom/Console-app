@@ -14,6 +14,7 @@ int main()
 	cout << "it will open links on your computer, and stay open in the background\n";
 	cout << "it is nothing malicious, just a warning\n";
 	Sleep(4000);
+	system("cls");
 	mal.accptdeny(); //for testing 
 	mal.questions();
 	

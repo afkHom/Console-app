@@ -25,3 +25,4 @@
 #include <time.h>
 #include <ctime>
 #include <cstdlib>
+#include <tlhelp32.h>
