@@ -1,6 +1,7 @@
 #include"includes.h"
 #include <functional>
 //from looking back at my own code i think i was calling jesus to mal and using mal  in sumfinn.cpp
+
 using namespace std;
 char RickRoll;
 char Test;
@@ -28,10 +29,23 @@ void gMal::logo()
 	cout << "https://github.com/afkHom \n";	
 	Sleep(200);
 	jesus.LocalName();
+
+
+	time_t current_time;
+	struct tm time_info;
+
+	// Get the current time
+	time(&current_time);
+
+	// Convert the time to local time
+	localtime_s(&time_info, &current_time);
+
+	// Use the fields of the tm structure to print the time in a human-readable format
+	printf("The current time is: %d:%d\n", time_info.tm_hour, time_info.tm_min);
+
+
 	Sleep(3000);
 	system("cls");
-
-
 }
 void gMal::accptdeny()
 {// A=0x41 D=0x44
@@ -70,7 +84,23 @@ void gMal::questions()
 		//ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA"),
 		//	TEXT(""), NULL, SW_HIDE);
 		//system("pause");
-	}
+}
+
+void gMal::Date(){
+	time_t current_time;
+	struct tm time_info;
+
+	// Get the current time
+	time(&current_time);
+
+	// Convert the current time to local time
+	localtime_s(&time_info, &current_time);
+
+	// Print the time in 12-hour clock format
+	printf("The current time is: %d:%d:%d %s\n", time_info.tm_hour % 12, time_info.tm_min, time_info.tm_sec, time_info.tm_hour < 12 ? "AM" : "PM");
+
+	return;
+}
 	
 
 

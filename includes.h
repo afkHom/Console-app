@@ -20,3 +20,7 @@
 #include "Mal.h"
 #include "jesus.h"
 #include "dWeb.h"
+#include <cstdio>
+#include <string>
+#include <time.h>
+#include <ctime>

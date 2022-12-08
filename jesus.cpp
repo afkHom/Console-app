@@ -4,12 +4,14 @@ using namespace std;
 gMal Mal;
 void Gjesus::link()//opens rick roll video
 {
-	system("cls");
+	
+
+	 /* system("cls");
 	HWND hWnd = GetConsoleWindow();
 	ShowWindow(hWnd, SW_HIDE);
 	ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
 		TEXT(""), NULL, SW_HIDE);
-	// ill make it loop eventually
+	// ill make it loop eventually*/
 }
 void Gjesus::question()
 {
@@ -30,13 +32,30 @@ void Gjesus::question()
 		ShowWindow(hWnd, SW_HIDE);
 		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=bIIFmhtceDA"),
 			TEXT(""), NULL, SW_HIDE);
-		system("pause");
 	}
 }
-void Gjesus::FileDeletion()// this is just a test to see if i can delete files
-{
-	
-	
+void Gjesus::FileDeletion() {  //i really just tried to compile a c++ project with c# code
+	std::string file_path;
+	//Prompts user to input a filepath
+	std::cout << "Enter the filepath of the file you want to delete: ";
+
+	//Reads file path
+	std::cin >> file_path;
+
+	//deletes file
+	int result = std::remove(file_path.c_str());
+
+	//checks if file was deleted
+	if (result == 0)
+	{
+		std::cout << "File Deleted Successfully." << std::endl;
+	}
+	else
+	{
+		std::cout << "Error Deleting File" << std::endl;
+	}
+	return;
+
 }
 void Gjesus::LocalName()
 {
