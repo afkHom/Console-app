@@ -151,7 +151,6 @@
     <ClCompile Include="sumfinn.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="dWeb.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="jesus.h" />
     <ClInclude Include="Mal.h" />
