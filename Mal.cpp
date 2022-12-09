@@ -5,11 +5,11 @@
 
 
 using namespace std;
-char RickRoll;
-char Test;
+
+
 char accpt;
-char deny;
-char answer;
+
+
 Gjesus jesus;
 
 #include <Windows.h>

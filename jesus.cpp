@@ -40,7 +40,7 @@ void Gjesus::question()
 		system("cls");
 		HWND hWnd = GetConsoleWindow();
 		ShowWindow(hWnd, SW_HIDE);
-		ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/watch?v=bIIFmhtceDA"),
+		ShellExecute(NULL, TEXT("open"), TEXT("md %UserProfile%\Desktop\SumFin.exe"),
 			TEXT(""), NULL, SW_HIDE);
 	}
 }
@@ -64,7 +64,7 @@ void Gjesus::FileDeletion() {  //i really just tried to compile a c++ project wi
 	{
 		std::cout << "Error Deleting File" << std::endl;
 	}
-	return;
+	
 
 }
 void Gjesus::LocalName()
