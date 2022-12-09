@@ -12,32 +12,66 @@ char deny;
 char answer;
 Gjesus jesus;
 
+#include <Windows.h>
+
 void gMal::logo()
 {
-	//Logo causes small errors, it doesnt break anything.
+	// Define the colors to use for the rainbow effect
+	const int colors[] = {
+		FOREGROUND_RED,
+		FOREGROUND_RED | FOREGROUND_GREEN,
+		FOREGROUND_GREEN,
+		FOREGROUND_GREEN | FOREGROUND_BLUE,
+		FOREGROUND_BLUE,
+		FOREGROUND_BLUE | FOREGROUND_RED
+	};
+
+	// Set the initial text color to red
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colors[0]);
+
+	// Display the logo using the rainbow colors
 	cout << "  _    _                 \n";
-	Sleep(100);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colors[1]);
+	Sleep(200);
 	cout << " | |  | |                \n";
-	Sleep(100);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colors[2]);
+	Sleep(200);
 	cout << " | |__| | ___  _ __ ___  \n";
-	Sleep(100);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colors[3]);
+	Sleep(200);
 	cout << " |  __  |/ _ \| '_ ` _ \ \n";
-	Sleep(100);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colors[4]);
+	Sleep(200);
 	cout << " | |  | | (_)| | | | | |\ \n";
-	Sleep(100);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colors[5]);
+	Sleep(200);
 	cout << " |_|  |_|\___/|_| |_| |_|\n";
-	Sleep(100);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colors[0]);
+	Sleep(200);
 	cout << "Made By:by Hom#2913\n";
-	cout << "https://github.com/afkHom \n";	
+	Sleep(200);
+	cout << "https://github.com/afkHom \n";
+
 	Sleep(200);
 	jesus.LocalName();
-
 	Date();
 
 	Sleep(3000);
 
 	system("cls");
+	// Reset the text color to the default value
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+	cout << "test program| Executable name sumfinn.exe\n";
+	cout << "it will open links on your computer, and stay open in the background\n";
+	cout << "it is nothing malicious, just a warning\n";
+	Sleep(3000);
+	cout << "The Process ID Should be copied to your clipboard" << std::endl; 
+	Sleep(3000);
+	system("cls");
+
+	
 }
+
 void gMal::accptdeny()
 {// A=0x41 D=0x44
 	cout << "Accept or Deny here please\n:";
@@ -117,6 +151,8 @@ void gMal::Date(){
 
 	return;
 }
+
+
 	
 
 
