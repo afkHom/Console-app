@@ -5,13 +5,8 @@
 
 
 using namespace std;
-
-
 char accpt;
-
-
 Gjesus jesus;
-
 #include <Windows.h>
 
 void gMal::logo()

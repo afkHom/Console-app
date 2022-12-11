@@ -2,6 +2,7 @@
 char qstn; // hopefully i can only use this one because i dont feel like declaring 20 of these
 using namespace std;
 gMal Mal;
+
 void Gjesus::link()//opens rick roll video
 {
 	
@@ -21,6 +22,7 @@ void Gjesus::link()//opens rick roll video
 		TEXT(""), NULL, SW_HIDE);
 	// ill make it loop eventually*/
 }
+
 void Gjesus::question()
 {
     
@@ -44,6 +46,7 @@ void Gjesus::question()
 			TEXT(""), NULL, SW_HIDE);
 	}
 }
+
 void Gjesus::FileDeletion() {  //i really just tried to compile a c++ project with c# code
 	std::string file_path;
 	//Prompts user to input a filepath
@@ -66,8 +69,8 @@ void Gjesus::FileDeletion() {  //i really just tried to compile a c++ project wi
 		return;
 	}
 	
-
 }
+
 void Gjesus::LocalName()
 {
 	TCHAR name[UNLEN + 1];

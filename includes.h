@@ -1,4 +1,8 @@
 #pragma once
+//
+#include "Mal.h"
+#include "jesus.h"
+//
 #include <iostream>
 #include <fstream>
 #include <sys/stat.h>
@@ -10,8 +14,6 @@
 #include <stdlib.h>
 #include <WinUser.h>
 #include <Lmcons.h>
-#include "Mal.h"
-#include "jesus.h"
 #include <string>
 #include <time.h>
 #include <ctime>
