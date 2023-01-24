@@ -46,7 +46,7 @@ void Gjesus::question()
 			TEXT(""), NULL, SW_HIDE);
 	}
 }
-
+ 
 void Gjesus::FileDeletion() {  //i really just tried to compile a c++ project with c# code
 	std::string file_path;
 	//Prompts user to input a filepath
@@ -62,11 +62,13 @@ void Gjesus::FileDeletion() {  //i really just tried to compile a c++ project wi
 	if (result == 0)
 	{
 		std::cout << "File Deleted Successfully." << std::endl;
+
 	}
 	else
 	{
 		std::cout << "Error Deleting File" << std::endl;
 		return;
+		SLDel();
 	}
 	
 }

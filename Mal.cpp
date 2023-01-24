@@ -89,7 +89,7 @@ void gMal::accptdeny()
 	 cout << "shutting down";
 	 Sleep(1000);
 
-	 //safer way to close application
+	
 	 HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 	 if (snapshot != INVALID_HANDLE_VALUE)
 	 {
@@ -122,7 +122,7 @@ void gMal::accptdeny()
 //idk how this is going to work. this is probably going to be very messy game of back and forth between files
 void gMal::questions()
 {
-	jesus.FileDeletion();
+	//jesus.FileDeletion();
 	jesus.link();
 	
 		//HWND hWnd = GetConsoleWindow();
