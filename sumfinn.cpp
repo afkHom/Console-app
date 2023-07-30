@@ -11,7 +11,7 @@ Gjesus jsus;
 int main()
 {	
 	//
-	mal.HwidCheck();
+	
 	// 
 	// ^^sets window name
 	mal.logo();
