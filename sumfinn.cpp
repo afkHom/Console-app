@@ -10,7 +10,9 @@ Gjesus jsus;
 //idk i might just give up on it just not feeling it anymore, atleast not right now.
 int main()
 {	
-
+	//
+	mal.HwidCheck();
+	// 
 	// ^^sets window name
 	mal.logo();
 	cout << "test program| Executable name sumfinn.exe\n";

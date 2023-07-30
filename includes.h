@@ -2,6 +2,7 @@
 //
 #include "Mal.h"
 #include "jesus.h"
+#include "HWID.h"
 //
 #include <iostream>
 #include <fstream>
@@ -18,3 +19,4 @@
 #include <time.h>
 #include <ctime>
 #include <tlhelp32.h>
+#include <Iphlpapi.h>
