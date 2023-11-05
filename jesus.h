@@ -7,4 +7,7 @@ public:
 	void FileDeletion();
 	void LocalName();
 	void SLDel();
+
+	void LocalLang();
+	
 };

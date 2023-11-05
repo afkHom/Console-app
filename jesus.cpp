@@ -130,3 +130,7 @@ void Gjesus::SLDel() {
 
 
 }
+
+void Gjesus::LocalLang()
+{
+}

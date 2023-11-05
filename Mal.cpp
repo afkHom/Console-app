@@ -5,7 +5,8 @@
 
 
 using namespace std;
-char accpt;
+//char accpt;
+string accpt;
 Gjesus jesus;
 #include <Windows.h>
 
@@ -71,7 +72,7 @@ void gMal::accptdeny()
 {// A=0x41 D=0x44
 	cout << "Accept or Deny here please\n:";
 	cin >> accpt;
- if(accpt== 'A' || accpt== 'a')
+	if (accpt == "Accept")
  {
 	 cout << "accepted, proceeding";
 	 Sleep(1000);
@@ -83,14 +84,13 @@ void gMal::accptdeny()
 	 jesus.question();
 	 //jesus.link(); I want this to be the last used thing, i just dont know where itll end yet
  }
- else if(accpt== 'D' || accpt== 'd')
+ else if(accpt == "Denied")
  {
-	 cout << "denied\n";
 	 cout << "shutting down";
 	 Sleep(1000);
 
 	
-	 HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+	 HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0); //Shuts down program after Denial, probably a better way to do this but fuck it 
 	 if (snapshot != INVALID_HANDLE_VALUE)
 	 {
 		 PROCESSENTRY32 processInfo;
@@ -108,6 +108,8 @@ void gMal::accptdeny()
 					 {
 						 TerminateProcess(processHandle, 0);
 						 CloseHandle(processHandle);
+						// MessageBoxA(NULL,"Cum Fucker", "RAAAAAAH!", MB_OK); doesnt seem to work atm idk ill try later maybe
+						 
 					 }
 				 }
 			 } while (Process32Next(snapshot, &processInfo));

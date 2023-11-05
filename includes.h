@@ -19,3 +19,4 @@
 #include <ctime>
 #include <tlhelp32.h>
 #include <Iphlpapi.h>
+#include <string>
