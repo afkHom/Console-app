@@ -24,7 +24,7 @@
     <ClCompile Include="jesus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dWeb.cpp">
+    <ClCompile Include="HWID.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -36,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HWID.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

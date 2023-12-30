@@ -145,12 +145,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="dWeb.cpp" />
+    <ClCompile Include="HWID.cpp" />
     <ClCompile Include="jesus.cpp" />
     <ClCompile Include="Mal.cpp" />
     <ClCompile Include="sumfinn.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HWID.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="jesus.h" />
     <ClInclude Include="Mal.h" />

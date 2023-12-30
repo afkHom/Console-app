@@ -2,6 +2,7 @@
 //
 #include "Mal.h"
 #include "jesus.h"
+#include "HWID.h"
 //
 #include <iostream>
 #include <fstream>
@@ -20,3 +21,5 @@
 #include <tlhelp32.h>
 #include <Iphlpapi.h>
 #include <string>
+#include <unordered_set>
+#include <intrin.h>
