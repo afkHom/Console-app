@@ -6,12 +6,12 @@ gMal Mal;
 void Gjesus::link()//opens rick roll video
 {
 	
-	std::string url = "https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA";	
+	string url = "https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA";	
 	int result = system(("start " + url).c_str()); 
 	if (result == 0) {
-		std::cout << "Shit popped" << std::endl;
+		cout << "Shit popped" << endl;
 	} else {
-		std::cout << "there was an error" << std::endl;
+		cout << "there was an error" << endl;
 	}
 	return;
 
@@ -48,25 +48,25 @@ void Gjesus::question()
 }
  
 void Gjesus::FileDeletion() {  //i really just tried to compile a c++ project with c# code
-	std::string file_path;
+	string file_path;
 	//Prompts user to input a filepath
-	std::cout << "Enter the filepath of the file you want to delete: ";
+	cout << "Enter the filepath of the file you want to delete: ";
 
 	//Reads file path
-	std::cin >> file_path;
+	cin >> file_path;
 
 	//deletes file
-	int result = std::remove(file_path.c_str());
+	int result = remove(file_path.c_str());
 
 	//checks if file was deleted
 	if (result == 0)
 	{
-		std::cout << "File Deleted Successfully." << std::endl;
+		cout << "File Deleted Successfully." << endl;
 
 	}
 	else
 	{
-		std::cout << "Error Deleting File" << std::endl;
+		cout << "Error Deleting File" << endl;
 		return;
 		SLDel();
 	}
@@ -86,16 +86,16 @@ void Gjesus::LocalName()
 
 void Gjesus::SLDel() {
 
-	namespace fs = std::filesystem;
+	namespace fs = filesystem;
 
 	
-	std::cout << "Would you like to delete the steam folders? (y/n) ";
+	cout << "Would you like to delete the steam folders? (y/n) ";
 	char response;
-	std::cin >> response;
+	cin >> response;
 
 	if (response == 'y' || response == 'Y')
 	{
-		std::cout << "Deleting Steam folders..." << std::endl;
+		cout << "Deleting Steam folders..." << endl;
 
 
 		fs::directory_iterator drives = fs::directory_iterator("/");
@@ -107,7 +107,7 @@ void Gjesus::SLDel() {
 			if (fs::is_directory(drive))
 			{
 
-				std::string drivePath = drive.path().string();
+				string drivePath = drive.path().string();
 
 
 				if (fs::exists(drivePath + "/steamapps") || fs::exists(drivePath + "/SteamLibrary"))
@@ -118,12 +118,12 @@ void Gjesus::SLDel() {
 
 
 					double percentComplete = (double)fs::space(drive).free / (double)fs::space(drive).capacity * 100;
-					std::cout << "Percent complete: " << percentComplete << "%" << std::endl;
+					cout << "Percent complete: " << percentComplete << "%" << endl;
 				}
 			}
 		}
 
-		std::cout << "Steam folders deleted." << std::endl;
+		cout << "Steam folders deleted." << endl;
 	}
 	else return;;
 

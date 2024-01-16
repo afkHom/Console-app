@@ -23,3 +23,6 @@
 #include <string>
 #include <unordered_set>
 #include <intrin.h>
+#include <cfgmgr32.h>
+#include <devguid.h>
+#include <initguid.h>
