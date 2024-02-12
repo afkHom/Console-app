@@ -8,7 +8,7 @@
 #include "HWID.h"
 #pragma comment(lib, "wbemuuid.lib")
 
-std::string GetCpuId() {
+std::string GHWID_H::GetCpuId() {
     int cpuInfo[4] = { -1 };
     __cpuid(cpuInfo, 0);
     char cpuIdStr[33];
@@ -16,7 +16,7 @@ std::string GetCpuId() {
     return std::string(cpuIdStr);
 }
 
-std::string GetMotherboardSerial() {
+std::string GHWID_H::GetMotherboardSerial() {
     HRESULT hres = CoInitializeEx(0, COINIT_MULTITHREADED);
     if (FAILED(hres)) {
         return "Failed to initialize COM library.";
@@ -136,3 +136,5 @@ std::string GetMotherboardSerial() {
     CoUninitialize();
     return "No motherboard information found.";
 }
+
+

@@ -156,9 +156,6 @@
     <ClInclude Include="jesus.h" />
     <ClInclude Include="Mal.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="learn.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

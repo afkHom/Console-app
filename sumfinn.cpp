@@ -5,17 +5,19 @@ gMal mal;
 Gjesus jsus;
 GHWID_H ghid;
 
+
+
 int main()
 {
-#include <iostream>
-#include <windows.h>
+ghid.GetCpuId();
+ghid.GetMotherboardSerial();
 
+
+
+//   ____________________________________________________________________________________________ :) yes i really just did this
 	mal.logo();
 	cout << "test program| Executable name sumfinn.exe\n";
-	cout << "it will open links on your computer, and stay open in the background\n";
-	cout << "it is nothing malicious, just a warning\n";
-	//cout << localeName;
-	Sleep(4000);
+	Sleep(1500);
 	system("cls");
 	mal.accptdeny(); //for testing 
 	mal.questions();

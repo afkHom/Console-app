@@ -4,6 +4,7 @@
 #include <string>
 class GHWID_H
 {
+public:
 	std::string GetCpuId();
 	std::string GetMotherboardSerial();
 };
