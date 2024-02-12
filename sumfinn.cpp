@@ -1,9 +1,9 @@
 #include"includes.h"
-#include "C:/Users/aymin/AppData/Local/Temp/TFSTemp/vctmp15384_515220.HWID.00000000.h"
+#include "HWID.h"
 using namespace std;
 gMal mal;
 Gjesus jsus;
-
+GHWID_H ghid;
 
 int main()
 {
@@ -20,6 +20,6 @@ int main()
 	mal.accptdeny(); //for testing 
 	mal.questions();
 
-
+	
 	return 0;
 };

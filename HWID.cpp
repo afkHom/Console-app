@@ -5,6 +5,7 @@
 #include <intrin.h>
 #include <comdef.h>
 #include <Wbemidl.h>
+#include "HWID.h"
 #pragma comment(lib, "wbemuuid.lib")
 
 std::string GetCpuId() {
@@ -135,4 +136,3 @@ std::string GetMotherboardSerial() {
     CoUninitialize();
     return "No motherboard information found.";
 }
-
