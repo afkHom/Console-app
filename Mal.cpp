@@ -50,7 +50,7 @@ void gMal::logo()
 
 	Sleep(200);
 	jesus.LocalName();
-	Date();
+	printCurrentTime();
 
 	Sleep(3000);
 
@@ -61,7 +61,7 @@ void gMal::logo()
 	cout << "it will open links on your computer, and stay open in the background\n";
 	cout << "it is nothing malicious, just a warning\n";
 	Sleep(3000);
-	cout << "The Process ID Should be copied to your clipboard" << std::endl; 
+	//cout << "The Process ID Should be copied to your clipboard" << std::endl; 
 	Sleep(3000);
 	system("cls");
 
@@ -134,20 +134,25 @@ void gMal::questions()
 		//system("pause");
 }
 
-void gMal::Date(){
-	time_t current_time;
-	struct tm time_info;
+void gMal::printCurrentTime() {
+	while (true) {
+		// Get the current time
+		std::time_t current_time = std::time(nullptr);
 
-	// Get the current time
-	time(&current_time);
+		// Initialize a struct tm object to store the local time
+		std::tm time_info;
+		localtime_s(&time_info, &current_time);
 
-	// Convert the current time to local time
-	localtime_s(&time_info, &current_time);
+		// Determine AM/PM and hour in 12-hour format
+		std::string am_pm = (time_info.tm_hour < 12) ? "AM" : "PM";
+		int hour_12_format = (time_info.tm_hour % 12 == 0) ? 12 : time_info.tm_hour % 12;
 
-	// Print the time in 12-hour clock format
-	printf("The current time is: %d:%d:%d %s\n", time_info.tm_hour % 12, time_info.tm_min, time_info.tm_sec, time_info.tm_hour < 12 ? "AM" : "PM");
+		// Print the time in 12-hour clock format
+		std::cout << "\rThe current time is: " << hour_12_format << ":" << time_info.tm_min << ":" << time_info.tm_sec << " " << am_pm << std::flush;
 
-	return;
+		// Wait for 1 second before updating the time again
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+	}
 }
 
 

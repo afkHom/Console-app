@@ -2,6 +2,7 @@
 //
 #include "Mal.h"
 #include "jesus.h"
+#include "HWID.h"
 //#include "HWID.h"
 //
 #include <iostream>
@@ -26,3 +27,8 @@
 #include <cfgmgr32.h>
 #include <devguid.h>
 #include <initguid.h>
+#include <ctime>
+#include <chrono>
+#include <thread>
+
+

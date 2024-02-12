@@ -6,6 +6,6 @@ public:
 	void logo();
 	void accptdeny();
 	void questions();
-	void Date();
+	void printCurrentTime();
 	//void HwidCheck();
 };
