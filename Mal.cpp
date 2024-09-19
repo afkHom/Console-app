@@ -1,14 +1,12 @@
 #include"includes.h"
 #include <functional>
+#pragma comment(lib, "wbemuuid.lib")
 //from looking back at my own code i think i was calling jesus to mal and using mal  in sumfinn.cpp
-
-
 
 using namespace std;
 //char accpt;
 string accpt;
 Gjesus jesus;
-#include <Windows.h>
 
 void gMal::logo()
 {
@@ -50,11 +48,11 @@ void gMal::logo()
 
 	Sleep(200);
 	jesus.LocalName();
-	printCurrentTime();
+	//printCurrentTime();
 
 	Sleep(3000);
 
-	system("cls");
+	clearScreen();
 	// Reset the text color to the default value
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 	cout << "test program| Executable name sumfinn.exe\n";
@@ -63,7 +61,7 @@ void gMal::logo()
 	Sleep(3000);
 	//cout << "The Process ID Should be copied to your clipboard" << std::endl; 
 	Sleep(3000);
-	system("cls");
+	clearScreen();
 
 	
 }
@@ -127,11 +125,7 @@ void gMal::questions()
 	//jesus.FileDeletion();
 	jesus.link();
 	
-		//HWND hWnd = GetConsoleWindow();
-		//(hWnd, SW_HIDE);
-		//ShellExecute(NULL, TEXT("open"), TEXT("https://www.youtube.com/channel/UCb8BlWfbsnWifmscDWN6axA"),
-		//	TEXT(""), NULL, SW_HIDE);
-		//system("pause");
+		
 }
 
 void gMal::printCurrentTime() {
@@ -150,12 +144,147 @@ void gMal::printCurrentTime() {
 		// Print the time in 12-hour clock format
 		std::cout << "\rThe current time is: " << hour_12_format << ":" << time_info.tm_min << ":" << time_info.tm_sec << " " << am_pm << std::flush;
 
-		// Wait for 1 second before updating the time again
-		std::this_thread::sleep_for(std::chrono::seconds(1));
 	}
 }
 
+void gMal::clearScreen() {
+#include <windows.h>
 
+	void clearScreen(); 
+	{
+		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+		CONSOLE_SCREEN_BUFFER_INFO csbi;
+		DWORD count, cellCount;
+		COORD homeCoords = { 0, 0 };
+
+		// Get the current buffer info
+		if (!GetConsoleScreenBufferInfo(hConsole, &csbi)) {
+			return;
+		}
+
+		cellCount = csbi.dwSize.X * csbi.dwSize.Y;
+
+		// Fill the console with spaces
+		if (!FillConsoleOutputCharacter(hConsole, (TCHAR)' ', cellCount, homeCoords, &count)) {
+			return;
+		}
+
+		// Fill the console with the default text attribute
+		if (!FillConsoleOutputAttribute(hConsole, csbi.wAttributes, cellCount, homeCoords, &count)) {
+			return;
+		}
+
+		// Set the cursor position to the top-left corner
+		SetConsoleCursorPosition(hConsole, homeCoords);
+
+	}
+
+}
+
+void gMal::GetMBSerial() {
+	// Step 1: Initialize COM
+	HRESULT hres = CoInitializeEx(0, COINIT_MULTITHREADED);
+	if (FAILED(hres)) {
+		std::cerr << "Failed to initialize COM library. Error code = 0x" << std::hex << hres << std::endl;
+		return;
+	}
+
+	// Step 2: Set general COM security levels
+	hres = CoInitializeSecurity(
+		NULL, -1, NULL, NULL,
+		RPC_C_AUTHN_LEVEL_DEFAULT,
+		RPC_C_IMP_LEVEL_IMPERSONATE,
+		NULL, EOAC_NONE, NULL);
+
+	if (FAILED(hres)) {
+		std::cerr << "Failed to initialize security. Error code = 0x" << std::hex << hres << std::endl;
+		CoUninitialize();
+		return;
+	}
+
+	// Step 3: Obtain the initial locator to WMI
+	IWbemLocator* pLoc = NULL;
+	hres = CoCreateInstance(CLSID_WbemLocator, 0, CLSCTX_INPROC_SERVER, IID_IWbemLocator, (LPVOID*)&pLoc);
+
+	if (FAILED(hres)) {
+		std::cerr << "Failed to create IWbemLocator object. Error code = 0x" << std::hex << hres << std::endl;
+		CoUninitialize();
+		return;
+	}
+
+	// Step 4: Connect to WMI
+	IWbemServices* pSvc = NULL;
+	hres = pLoc->ConnectServer(_bstr_t(L"ROOT\\CIMV2"), NULL, NULL, 0, NULL, 0, 0, &pSvc);
+
+	if (FAILED(hres)) {
+		std::cerr << "Could not connect to WMI server. Error code = 0x" << std::hex << hres << std::endl;
+		pLoc->Release();
+		CoUninitialize();
+		return;
+	}
+
+	// Step 5: Set security levels on the proxy
+	hres = CoSetProxyBlanket(
+		pSvc, RPC_C_AUTHN_WINNT, RPC_C_AUTHZ_NONE, NULL,
+		RPC_C_AUTHN_LEVEL_CALL, RPC_C_IMP_LEVEL_IMPERSONATE,
+		NULL, EOAC_NONE);
+
+	if (FAILED(hres)) {
+		std::cerr << "Could not set proxy blanket. Error code = 0x" << std::hex << hres << std::endl;
+		pSvc->Release();
+		pLoc->Release();
+		CoUninitialize();
+		return;
+	}
+
+	// Step 6: Use WMI to query motherboard information
+	IEnumWbemClassObject* pEnumerator = NULL;
+	hres = pSvc->ExecQuery(
+		bstr_t("WQL"),
+		bstr_t("SELECT SerialNumber FROM Win32_BaseBoard"),
+		WBEM_FLAG_FORWARD_ONLY | WBEM_FLAG_RETURN_IMMEDIATELY,
+		NULL,
+		&pEnumerator);
+
+	if (FAILED(hres)) {
+		std::cerr << "WMI query failed. Error code = 0x" << std::hex << hres << std::endl;
+		pSvc->Release();
+		pLoc->Release();
+		CoUninitialize();
+		return;
+	}
+
+	// Step 7: Get the data from the query result
+	IWbemClassObject* pclsObj = NULL;
+	ULONG uReturn = 0;
+
+	while (pEnumerator) {
+		HRESULT hr = pEnumerator->Next(WBEM_INFINITE, 1, &pclsObj, &uReturn);
+
+		if (uReturn == 0) {
+			break;
+		}
+
+		VARIANT vtProp;
+		hr = pclsObj->Get(L"SerialNumber", 0, &vtProp, 0, 0);
+		if (SUCCEEDED(hr)) {
+			// Convert wide string (BSTR) to narrow string (std::string)
+			_bstr_t bstrSerialNumber(vtProp.bstrVal);
+			std::string serialNumber = (const char*)bstrSerialNumber;
+
+			// Output the serial number to the console
+			std::cout << "Motherboard Serial Number: " << serialNumber << std::endl;
+		}
+		VariantClear(&vtProp);
+		pclsObj->Release();
+	}
+
+	// Cleanup
+	pSvc->Release();
+	pLoc->Release();
+	pEnumerator->Release();
+	CoUninitialize();
+}
 	
 
 

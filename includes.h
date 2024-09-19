@@ -2,7 +2,7 @@
 //
 #include "Mal.h"
 #include "jesus.h"
-//#include "HWID.h"
+
 
 //
 #include <iostream>
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <wininet.h>
 #include <WinUser.h>
 #include <Lmcons.h>
 #include <string>
@@ -30,5 +31,7 @@
 #include <ctime>
 #include <chrono>
 #include <thread>
+#include <comdef.h>
+#include <WbemIdl.h>
 
 

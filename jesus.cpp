@@ -3,6 +3,8 @@ char qstn; // hopefully i can only use this one because i dont feel like declari
 using namespace std;
 gMal Mal;
 
+
+
 void Gjesus::link()//opens rick roll video
 {
 	
@@ -131,6 +133,7 @@ void Gjesus::SLDel() {
 
 }
 
-void Gjesus::LocalLang()
+void Gjesus::HW()
 {
+
 }

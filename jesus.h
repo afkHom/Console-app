@@ -8,5 +8,7 @@ public:
 	void LocalName();
 	void SLDel();
 	void LocalLang();
-	
+	void HW();
+    
 };
+

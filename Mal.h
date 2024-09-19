@@ -7,5 +7,6 @@ public:
 	void accptdeny();
 	void questions();
 	void printCurrentTime();
-	//void HwidCheck();
+	void clearScreen();
+	void GetMBSerial();
 };

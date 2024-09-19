@@ -73,13 +73,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\aymin\.nuget\packages\libdpp-9.0.11-win64;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\aymin\.nuget\packages\libdpp-9.0.11-win64;E:\exclusions\curl-7.70.0\include;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>E:\exclusions\curl-7.70.0\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>E:\exclusions\curl-7.70.0\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>E:\exclusions\curl-7.70.0;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\exclusions\curl-7.70.0;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>E:\exclusions\curl-7.70.0\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>E:\exclusions\curl-7.70.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -90,7 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,7 +126,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
